@@ -29,10 +29,10 @@ def solution(num1, num2):
 
     return answer
 
+
 # 중앙값 구하기
 
 import math
-
 
 def solution(array):
     array.sort()
