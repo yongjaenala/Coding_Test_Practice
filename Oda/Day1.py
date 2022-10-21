@@ -9,8 +9,6 @@ def solution(num1, num2):
 
     return answer
 
-
-
 # 2. 두 수의 나눗셈
 import math
 def solution(num1, num2):
