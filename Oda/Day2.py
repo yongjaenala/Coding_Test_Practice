@@ -4,13 +4,15 @@
 import math
 
 def solution(denum1, num1, denum2, num2):
-    bottom = num1 * num2 / math.gcd(num1, num2)
+    bottom = num1 * num2
     top = ((denum1 * num2) + (denum2 * num1))
 
-    top = top / math.gcd(num1, num2)
+    b = bottom / math.gcd(bottom, top)
+    t = top / math.gcd(bottom, top)
 
-    answer = [top, bottom]
+    answer = [t, b]
     return answer
+
 
 # 배열 원소 값 두배 만들기
 def solution(numbers):
