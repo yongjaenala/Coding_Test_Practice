@@ -9,7 +9,6 @@ def solution(my_string):
         a += chr(i)
     return a
 
-###
 # 두 번째 풀이
 def solution(my_string):
     answer = []
