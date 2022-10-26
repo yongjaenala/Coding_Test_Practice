@@ -1,4 +1,6 @@
 def solution(polynomial):
+    if len(polynomial.strip()) == 0 :
+        return "0"
     if '+' not in str(polynomial) :
         if 'x' not in str(polynomial) :
             return str(polynomial)
@@ -34,6 +36,8 @@ polynomial = "3x + 7 + x"	#"4x + 7"
 # polynomial = "0"  #0
 # polynomial = "6"  #6
 # polynomial = "4x"
-# polynomial = " " #" "
+polynomial = " " #"0"
+polynomial = "    " #"0"
 # polynomial = "x"    #"x"
+# polynomial = "2x + 2x"  #"4x"
 print(solution(polynomial))
