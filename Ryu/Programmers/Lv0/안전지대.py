@@ -1,17 +1,29 @@
 def solution(board):
     answer = 0
+    for i in range(0,len(board)):
+        for j in range(0, len(board)):
+            try:
+                if board[i][j] == 1:
+                    board[i - 1][i-1] += 1
+                    board[i - 1][i] += 1
+                    board[i - 1][i + 1] += 1
+                    board[i][i - 1] += 1
+                    board[i][i] += 1
+                    board[i][i + 1] += 1
+                    board[i+1][i - 1] += 1
+                    board[i+1][i] += 1
+                    board[i+1][i + 1] += 1
+            except:
+                pass
+    for i in range(0,len(board)):
+        for j in range(0, len(board)):
+            if board[i][j] == 0:
+                answer += 1
     return answer
 
 board1 = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]
 board2 = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]
 board3 = [[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]]
 board4 = [[0,0,0,0,0],[0,0,0,0,1],[0,0,0,0,1],[0,0,0,0,1],[0,0,0,0,1]]
-# borad1.shape
 
-for i in board1:
-    print(i)
-
-for i in board1:
-    if board1[i] == 1:
-        for j in range(0,3):
-            board1[i]
+print(solution(board1))
