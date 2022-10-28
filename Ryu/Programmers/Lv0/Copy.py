@@ -14,12 +14,9 @@ def solution(board):
                     board[i + 1][j - 1] += 10
                     board[i + 1][j] += 10
                     board[i + 1][j + 1] += 10
-                    if i == 0:
-                        board[i-1][j-1] += 10
-                        board[i - 1][j] += 10
-                        board[i - 1][j + 1] += 10
             except:
                 pass
+
     for i in range(0,len(board)):
         for j in range(0, len(board)):
             if board[i][j] == 0:
