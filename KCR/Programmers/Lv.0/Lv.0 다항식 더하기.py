@@ -14,7 +14,7 @@ def solution(polynomial):
             if len(i) == 1 :
                 x += 1
             else :
-                x += int(i[0])
+                x += int(i.replace('x',''))   # i[0] -- x의 계수가 10이상일 경우
         else :
             num += int(i)
     if num == 0 :
@@ -28,16 +28,3 @@ def solution(polynomial):
     if (x == 0) & (num == 0) :
         return "0"
     return str(x)+'x + '+str(num)
-
-polynomial = "3x + 7 + x"	#"4x + 7"
-# polynomial = "x + x + x"	#"3x"
-# polynomial = "x + 7 + 15"   #"x + 22"
-# polynomial = "3 + 6 + 1"    #"10"
-# polynomial = "0"  #0
-# polynomial = "6"  #6
-# polynomial = "4x"
-polynomial = " " #"0"
-polynomial = "    " #"0"
-# polynomial = "x"    #"x"
-# polynomial = "2x + 2x"  #"4x"
-print(solution(polynomial))
