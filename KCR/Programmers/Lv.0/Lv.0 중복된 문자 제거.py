@@ -3,7 +3,7 @@ def solution(my_string):
     for i in my_string :
         if i not in s.keys() :
             s[i] = 1
-    answer = ''
+    answer = ""
     for i in s.keys() :
         answer += i
     return answer
