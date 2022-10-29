@@ -7,8 +7,8 @@ def solution(n):
         na = i%10
         # if na%3 == 0 :
         #     contain += 1
-    return n+contain+multipledfsd
+    return n+contain+multiple
 
 n = 15	#25
-# n = 40	#76/cxvdfsdfasgasgfsdakfhladkfhk nx   jKJkslhfksdhjfkahdfkajfhksadfxz
+# n = 40	#76
 print(solution(n))
