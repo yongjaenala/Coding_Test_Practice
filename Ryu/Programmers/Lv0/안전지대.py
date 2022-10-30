@@ -1,22 +1,13 @@
+# 미해결
+
 def solution(board):
     answer = 0
 
     for i in range(0,len(board)):
         for j in range(0, len(board)):
-            try:
-                if (board[i][j] % 10) == 1:
-                    board[i - 1][j - 1] += 10
-                    board[i - 1][j] += 10
-                    board[i - 1][j + 1] += 10
-                    board[i][j - 1] += 10
-                    board[i][j] += 10
-                    board[i][j + 1] += 10
-                    board[i + 1][j - 1] += 10
-                    board[i + 1][j] += 10
-                    board[i + 1][j + 1] += 10
-            except:
-                pass
-
+            if board[i][j] == 1:
+                if i == 0:
+                    board[i][j]
     for i in range(0,len(board)):
         for j in range(0, len(board)):
             if board[i][j] == 0:
