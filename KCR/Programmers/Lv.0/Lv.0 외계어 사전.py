@@ -1,10 +1,14 @@
 def solution(spell, dic):
+    same = []
     for i in dic :
-        if len(i) != len(spell) :
-            dic.pop(dic.index(i))
-    return dic
-
-spell = ["p", "o", "s"]	; dic = ["sod", "eocd", "qixm", "adio", "soo"]	#2
-spell = ["z", "d", "x"]	; dic = ["def", "dww", "dzx", "loveaw"]	#1
-spell = ["s", "o", "m", "d"] ; dic = ["moos", "dzx", "smm", "sunmmo", "som"]	#2
-print(solution(spell, dic))
+        if len(set(i)) == len(spell) :
+            same.append(i)
+    if len(same) == 0 :
+        return 2
+    print(same)
+    for i in same :
+        for j in spell :
+            i = i.replace(j, '')
+        if len(i) == 0 :
+            return 1
+    return 2
