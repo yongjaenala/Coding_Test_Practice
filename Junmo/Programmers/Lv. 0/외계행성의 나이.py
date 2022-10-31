@@ -1,5 +1,6 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/120834
 # 외계행성의 나이
+import string
 
 def solution(age):
     answer = ''
@@ -26,3 +27,23 @@ def solution(age):
             break;
 
     return answer
+
+# Gaon's Solution
+# import string
+#
+# def solution(age):
+#     lower = [i for i in string.ascii_lowercase]
+#     answer = ''
+#     while age:
+#         answer = lower[age % 10] + answer
+#         age = age // 10
+#     return answer
+
+# Chaerin's Solution
+# def solution(age):
+#     eng_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+#     for i in str(age) :
+#         answer = ''
+#         for i in str(age) :
+#             answer += eng_list[int(i)]
+#         return answer
