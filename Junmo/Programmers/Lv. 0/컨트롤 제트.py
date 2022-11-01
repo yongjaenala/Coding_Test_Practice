@@ -1,4 +1,4 @@
-# 미완
+# 아직못품
 # https://school.programmers.co.kr/learn/courses/30/lessons/120853
 # 컨트롤 제트
 
