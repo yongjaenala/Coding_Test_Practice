@@ -1,3 +1,4 @@
+# 미해결
 def solution(array):
     if len(array) % 2 == 0:
         return array[len(array)//2]
