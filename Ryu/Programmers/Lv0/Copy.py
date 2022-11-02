@@ -1,6 +1,5 @@
 def solution(board):
     answer = 0
-
     for i in range(0,len(board)):
         for j in range(0, len(board)):
             try:
@@ -40,3 +39,4 @@ print(solution(board5)) # 8
 print(solution(board6)) # 15
 print(solution(board7)) #
 print(solution(board8)) #
+
