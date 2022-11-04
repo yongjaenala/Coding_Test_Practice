@@ -1,19 +1,12 @@
-emergency = [1,2,3,4,5,6,7]
-emer = sorted(emergency, reverse=True)
+def solution(emergency):
+    answer = []
+    emer = sorted(emergency, reverse=True)
 
-print(emer)
+    for i in emergency:
+        answer.append(emer.index(i) + 1)
 
-dict = {}
+    return answer
 
-for key, value in enumerate(emer):
-    dict[key+1] = value
 
-print(dict)
-
-result=[]
-for key, value in dict.items():
-        for i in range(len(emergency)):
-            if emergency[i] == value:
-                result.insert(i, key)
-print(result)
-
+def solution_another(emergency):
+    return [sorted(emergency, reverse=True).index(e) + 1 for e in emergency]
