@@ -1,11 +1,11 @@
 def solution(sides):
     mx = max(sides)
-    Re = sum(sides.remove(max(sides)))
+    sides.remove(mx)
+    Re = sum(sides)
     if mx < Re:
         return 1
     else:
         return 2
-
 
 
 
