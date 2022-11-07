@@ -1,6 +1,6 @@
 def solution(price, money, count):
-    notenough = price*sum(range(1,count+1)) - money
-    if notenough > 0 :
-        return notenough
+    mo = price*sum(range(1,count+1)) - money
+    if mo > 0 :
+        return mo
     else :
         return 0
