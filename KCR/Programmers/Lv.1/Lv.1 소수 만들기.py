@@ -13,3 +13,4 @@ def solution(nums):
 nums = [1,2,3,4]	# 1
 nums = [1,2,7,6,4]	# 4
 print(solution(nums))
+# 참고
