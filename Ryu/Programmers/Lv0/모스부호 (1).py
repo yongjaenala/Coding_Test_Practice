@@ -8,9 +8,9 @@ def solution(letter):
     }
 
     answer = ''
-
     letter = letter.split(' ')
-
+    for i in letter:
+        answer += morse[i]
     return answer
 
 morse = {
@@ -25,4 +25,4 @@ letter = ".... . .-.. .-.. ---"
 letter = letter.split(' ')
 for i in letter:
     print(i)
-print(morse.keys())
+print(morse['.-'])
