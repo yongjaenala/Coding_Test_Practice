@@ -1,13 +1,17 @@
+# def solution(array):
+#     answer = 0
+#     for i in array:
+#         for j in range(len(str(i))):
+#             if str(i)[j] == '7':
+#                 answer += 1
+#     return answer
+
 def solution(array):
-    answer = 0
-    for j in array:
-        if int(j % 10) == 7:
-            j = j / 10
-            answer += 1
-        elif int(j / 10) < 0:
-            break
-    return answer
+    return sum([str(i).count('7') for i in array])
 
 array = [7,77,17]
+# array = [7,7,2,10,17,777]
 print(solution(array))
-print(7%10)
+# str(array[0])
+answer = 0
+
