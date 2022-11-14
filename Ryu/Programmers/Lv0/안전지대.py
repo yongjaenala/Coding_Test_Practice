@@ -2,50 +2,71 @@
 # 0,0 배열 크기가 에러 남
 def solution(board):
     answer = 0
-    if len(board) == 0 :
-
-    for i in range(0,len(board)):
-        for j in range(0, len(board)):
-            if (i == 0 & j == 0):
-                if (board[i][j] % 10) == 1:
-                    board[i][j + 1] += 10
-                    board[i + 1][j] += 10
-                    board[i + 1][j + 1] += 10
-            elif(i==0 & j == len(board)):
-                if (board[i][j] % 10) == 1:
-                    board[i][j - 1] += 10
-                    board[i + 1][j - 1] += 10
-                    board[i + 1][j] += 10
-            elif(j==0 & i==len(board)):
-                if (board[i][j] % 10) == 1:
-                    board[i - 1][j] += 10
-                    board[i - 1][j + 1] += 10
-                    board[i][j + 1] += 10
-            elif(i==0):
-                if (board[i][j] % 10) == 1:
-                    board[i][j - 1] += 10
-                    board[i][j + 1] += 10
-                    board[i + 1][j - 1] += 10
-                    board[i + 1][j] += 10
-                    board[i + 1][j + 1] += 10
-            elif(j==0):
-                if (board[i][j] % 10) == 1:
-                    board[i - 1][j] += 10
-                    board[i - 1][j + 1] += 10
-                    board[i][j + 1] += 10
-                    board[i + 1][j] += 10
-                    board[i + 1][j + 1] += 10
-            else:
-                if (board[i][j] % 10) == 1:
-                    board[i - 1][j - 1] += 10
-                    board[i - 1][j] += 10
-                    board[i - 1][j + 1] += 10
-                    board[i][j - 1] += 10
-                    board[i][j + 1] += 10
-                    board[i + 1][j - 1] += 10
-                    board[i + 1][j] += 10
-                    board[i + 1][j + 1] += 10
-
+    if len(board) == 1 :
+        if board[0] == 1:
+            return 1
+        else:
+            return 0
+    else:
+        for i in range(0,len(board)):
+            for j in range(0, len(board)):
+                try:
+                    if (board[i][j] % 10) == 1:
+                        board[i - 1][j - 1] += 10
+                        board[i - 1][j] += 10
+                        board[i - 1][j + 1] += 10
+                        board[i][j - 1] += 10
+                        board[i][j] += 10
+                        board[i][j + 1] += 10
+                        board[i + 1][j - 1] += 10
+                        board[i + 1][j] += 10
+                        board[i + 1][j + 1] += 10
+                except:
+                    pass
+        # for i in range(1,len(board)):
+        #     for j in range(1, len(board)):
+        #         try:
+        #             if (i == 0 & j == 0):
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i][j + 1] += 10
+        #                     board[i + 1][j] += 10
+        #                     board[i + 1][j + 1] += 10
+        #             elif(i==0 & j == len(board)):
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i][j - 1] += 10
+        #                     board[i + 1][j - 1] += 10
+        #                     board[i + 1][j] += 10
+        #             elif(j==0 & i==len(board)):
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i - 1][j] += 10
+        #                     board[i - 1][j + 1] += 10
+        #                     board[i][j + 1] += 10
+        #             elif(i==0):
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i][j - 1] += 10
+        #                     board[i][j + 1] += 10
+        #                     board[i + 1][j - 1] += 10
+        #                     board[i + 1][j] += 10
+        #                     board[i + 1][j + 1] += 10
+        #             elif(j==0):
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i - 1][j] += 10
+        #                     board[i - 1][j + 1] += 10
+        #                     board[i][j + 1] += 10
+        #                     board[i + 1][j] += 10
+        #                     board[i + 1][j + 1] += 10
+        #             else:
+        #                 if (board[i][j] % 10) == 1:
+        #                     board[i - 1][j - 1] += 10
+        #                     board[i - 1][j] += 10
+        #                     board[i - 1][j + 1] += 10
+        #                     board[i][j - 1] += 10
+        #                     board[i][j + 1] += 10
+        #                     board[i + 1][j - 1] += 10
+        #                     board[i + 1][j] += 10
+        #                     board[i + 1][j + 1] += 10
+        #         except:
+        #             pass
 
     for i in range(0,len(board)):
         for j in range(0, len(board)):
