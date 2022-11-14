@@ -1,9 +1,20 @@
+# def solution(numbers, k):
+#
+#     even = [i for i in range(1000) if i % 2 == 0]
+#
+#     num_in = even[k]%len(numbers)
+#
+#     answer = numbers[num_in]
+#     return answer
 def solution(numbers, k):
-    answer = 0
 
-    numbers/3
+    num_in = ((k-1)*2)%len(numbers)
 
+    answer = numbers[num_in]
 
     return answer
 
-solution([1, 2, 3, 4, 5, 6],5)
+even = [i for i in range(1000) if i % 2 == 0]
+print(even)
+
+print(solution([1, 2, 3, 4], 2))
