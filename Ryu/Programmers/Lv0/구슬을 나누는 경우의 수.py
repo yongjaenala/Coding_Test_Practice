@@ -1,11 +1,29 @@
-# 미해걀
+# def solution(balls, share):
+#     answer = 1
+#     a = 0
+#     for i in range(share + 1, balls + 1):
+#         a += 1
+#         answer *= i
+#         answer /= a
+#     return answer
+
+import math
 def solution(balls, share):
-    answer = 1
-    for i in range(balls,share,-1):
-        print(i)
-        answer *= i
-    return answer
+    return math.comb(balls,share)
+
+
 
 balls = 5
 share = 3
-print(solution(balls,share))
+answer = 1
+a = 0
+for i in range(share+1,balls+1):
+    a += 1
+    answer *= i
+    answer /= a
+    print(i)
+    print(a)
+
+print(answer)
+# print(answer/a)
+print(6/2)
