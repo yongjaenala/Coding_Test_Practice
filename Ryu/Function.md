@@ -81,4 +81,16 @@ str.isdigit('0123') : True
 '0123'.isdigit() : True
 ```
 
+#### math.comb(n,k) nCk | 조합
+```python
+import math
 
+n = 10
+k = 2
+
+nCk = math.comb(n,k)
+print(nCk)
+```
+```python
+45
+```
