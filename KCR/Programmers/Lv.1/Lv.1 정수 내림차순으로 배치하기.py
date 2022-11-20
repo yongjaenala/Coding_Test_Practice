@@ -1,2 +1,2 @@
 def solution(n):
-    return list(map(int,reversed(str(n))))
+    return int(''.join(sorted(list(str(n)), reverse=True)))
